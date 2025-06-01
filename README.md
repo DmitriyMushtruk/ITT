@@ -5,7 +5,7 @@
     
     `git clone https://github.com/DmitriyMushtruk/ITT.git`
 
-2. **Create and configure .env file. Copy the example environment variables file and edit the values as needed**
+2. **Create and configure .env file. Copy the example environment variables file and edit the values as needed. (It is necessary to add OPENAI_API_KEY variable)**
 
     `cp .env.example .env`
     
