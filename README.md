@@ -62,18 +62,18 @@ There are two ways to run tests: via Docker Compose or via Makefile.
 
 Interactive API documentation is available at [http://localhost:8000/api/docs](http://localhost:8000/api/docs).
 
-- **GET /**  
+- **GET http://localhost:8000/**  
     Serves the single‐page frontend (`static/index.html`).
     
-- **POST /api/ask**  
+- **POST http://localhost:8000/api/ask**  
     Request JSON: `{ "question": "<your question>" }`  
     Response JSON: `{ "answer": "<AI-generated answer>" }`  
     Embeds the question, finds the top FAQ context by cosine similarity, calls OpenAI ChatCompletion to generate an answer, and saves the Q&A pair.
     
-- **GET /api/history**  
+- **GET http://localhost:8000/api/history**  
     Returns a JSON array of previously asked questions with their answers and timestamps.
     
-- **GET /static/{path}**  
+- **GET http://localhost:8000/static/{path}**  
     Serves any file in the `static/` directory (e.g., CSS, JS).
 
 ---
