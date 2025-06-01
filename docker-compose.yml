@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: ai_helper
+    build: .
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - python-net
+    volumes:
+      - ./logger/app.log:/app/logger/app.log
+
+networks:
+  python-net:
+    name: python-net
